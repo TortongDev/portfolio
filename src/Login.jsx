@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import Swal from 'sweetalert2'
+import { useNavigate  } from 'react-router-dom';
 
 function Login(){
-
+    let history  = useNavigate ();
     useEffect(()=>{
         document.querySelector('#submit').addEventListener('click', ()=>{
                 let password = document.querySelector('[name=password]')
@@ -22,6 +23,8 @@ function Login(){
                         text: 'ยินดีต้อนรับและขอบคุณที่สนใจเข้าชม Website Portfolio ของผมนะครับ ^_^ ',
                         icon: 'success',
                         showConfirmButton: false
+                    }).then((data)=>{
+                        history('/portfolio')
                     })
                 },3000)
             }else{

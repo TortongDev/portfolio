@@ -29,6 +29,7 @@ article.wrapper-login {
   align-items: center;
   justify-content: center;
 }
+
 section.login {
   transition: 1s;
   width: 500px;
@@ -446,10 +447,31 @@ section.skill {
 section.experience {
   display: flex;
   flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 .experience-item {
   min-height: 80vh;
   flex-grow: 1;
   flex-basis: 300px;
   padding-inline: 20px;
+}
+.experience-item h6 {
+  font-weight: 100;
+}
+.wrapper-community {
+  width: 80%;
+  margin: auto;
+  min-height: 90vh;
+}
+.wrapper-community h3 {
+  text-align: center;
+}
+.wrapper-contact {
+  width: 80%;
+  margin: auto;
+  min-height: 90vh;
+}
+.wrapper-contact h3 {
+  text-align: center;
 }

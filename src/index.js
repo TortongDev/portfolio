@@ -1,28 +1,35 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Login from './Login';
-import { createBrowserRouter , RouterProvider } from 'react-router-dom';
 import MainPage from './MainPage';
+import HomePage from './AppPortfolio/HomePage';
+import DetailPage from './AppPortfolio/DetailPage';
+// import './index.css';
+// import './portfolio.css';
+import './AppPortfolio/style.css'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Login />,
-  },
-  {
-    path: '/welcome-to-portfolio',
-    element: <MainPage />
-  }
-])
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/welcome-to-portfolio" element={<MainPage />} />
+        <Route path="/portfolio" element={<HomePage />} />
+        <Route path="/detail/:idUser" element={<DetailPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
-root.render(
-  <RouterProvider router={router} />
-);
+// After
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
+
+// ReactDOM.render(<App />, document.getElementById('root'));
+
 reportWebVitals();

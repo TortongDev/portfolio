@@ -5,6 +5,8 @@ import SectionProfile from "./SectionProfile";
 import SectionSkill from "./SectionSkill";
 import SectionPerformance from "./SectionPerformance";
 import SectionExperience from "./SectionExperience";
+import SectionCommunity from "./SectionCommunity";
+import SectionContact from "./SectionContact";
 
 function MainPage(){
     useEffect(()=>{
@@ -38,6 +40,8 @@ function MainPage(){
             <SectionSkill />
             <SectionPerformance />
             <SectionExperience />
+            <SectionCommunity />
+            <SectionContact />
             <div id="back-to-top">
                <a href="#portfolio-title">Top</a> 
             </div>
