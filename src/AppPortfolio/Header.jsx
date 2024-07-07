@@ -2,24 +2,12 @@ import { useEffect, useState } from "react";
 function Header (){
     
     let [hit, setHit] = useState(false)
-
     const clickOnBar = ()=>{
+
         setHit(hit => !hit)
-        // if(hit == false){
-        //     let menu = document.querySelector('.menu-mobile');
-        //     menu.classList.add('menu-mobile-open-slide');
-        //     setHit(true)
-        // }else{
-        //     let menu = document.querySelector('.menu-mobile');
-        //     menu.classList.remove('menu-mobile-open-slide');
-        //     setHit(false)
-
-        // }
-    }
-    
-
+    }    
     let [noti, setNoti] = useState(false)
-    let [title, setTitle] = useState('v')
+    let [title, setTitle] = useState('')
 
     const chked = (event,titleMenu)=>{
         setTitle(titleMenu)
@@ -43,7 +31,6 @@ function Header (){
             });
             setHit(hit => !hit)
         }
-
     }
     let labelHandle = document.querySelectorAll('label')
     labelHandle.forEach(element => {
@@ -72,7 +59,7 @@ function Header (){
                         <li><label onClick={()=>chked('education','การศึกษา')}>การศึกษา</label></li>
                         <li><label onClick={()=>chked('experience','การทำงาน/ประสบการณ์')}>การทำงาน/ประสบการณ์</label></li>
                         <li><label onClick={()=>chked('performance','ผลงาน')}>ผลงาน</label></li>
-                        <li><label onClick={()=>chked('contact','การทำงาน/ประสบการณ์')} >การทำงาน/ประสบการณ์</label></li>
+                        <li><label onClick={()=>chked('contact','การทำงาน/ประสบการณ์')} >บทความ</label></li>
                     </ul>
                 </section>
                 <section className="header-navbar">
@@ -81,7 +68,7 @@ function Header (){
                         <li><label onClick={()=>chked('education','การศึกษา')}>การศึกษา</label></li>
                         <li><label onClick={()=>chked('experience','การทำงาน/ประสบการณ์')}>การทำงาน/ประสบการณ์</label></li>
                         <li><label onClick={()=>chked('performance','ผลงาน')}>ผลงาน</label></li>
-                        <li><label onClick={()=>chked('contact','การทำงาน/ประสบการณ์')} >การทำงาน/ประสบการณ์</label></li>
+                        <li><label onClick={()=>chked('contact','การทำงาน/ประสบการณ์')} >บทความ</label></li>
                     </ul>
                 </section>
 
